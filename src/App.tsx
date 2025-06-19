@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import InputBox from "./components/InputBox";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [text, setText] = useState("");
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div>
+      <InputBox
+        value={text}
+        onChange={setText}
+        placeholder="请输入内容..."
+        rows={6}
+        className="border p-2 rounded"
+      />
+      <p>输入内容：{text}</p>
+      <p className="text-lg text-gray-700 leading-relaxed">
+        这是一个使用 Tailwind CSS 样式的段落示例。
+        它设置了较大的字体、柔和的灰色文字和舒适的行高。
       </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
