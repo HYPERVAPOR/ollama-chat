@@ -9,15 +9,10 @@ function App() {
       <InputBox
         value={text}
         onChange={setText}
-        placeholder="请输入内容..."
+        placeholder="问我任何问题..."
         rows={6}
-        className="border p-2 rounded"
       />
       <p>输入内容：{text}</p>
-      <p className="text-lg text-gray-700 leading-relaxed">
-        这是一个使用 Tailwind CSS 样式的段落示例。
-        它设置了较大的字体、柔和的灰色文字和舒适的行高。
-      </p>
     </div>
   );
 }
